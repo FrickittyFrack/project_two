@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>LAGG</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="styles/page.css">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto|Rubik" rel="stylesheet">
+    
+    <!-- jQuery Links -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar">
+        <div class="name">LAGG</div>
+        <div class="nav btn nav-btn home">Home</div>
+        <div class="nav btn nav-btn games">Games</div>
+        <div class="nav btn nav-btn following">Following</div>
+        <div class="nav btn nav-btn menu dropdown"><i class="fas fa-2x fa-bars"></i>
+            <div class="dropdown-content">
+                <div class="dropdown-item">Games</div>
+                <div class="dropdown-item">Settings</div>
+                <hr>
+                <div class="dropdown-item">Login</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for page -->
+    <!-- News api key
+    161b9494907047dcabeff40d6eab76f1 -->
+    <div id="container-for-page">
+        <div id="tab-bar">
+            <div class="tablink tab-design active-tab bttn" onclick="openCity(event,'my-feed')">My Feed</div>
+            <div class="tablink tab-design bttn" onclick="openCity(event,'my-stats')">My Stats</div>
+            <div class="tablink tab-design bttn" onclick="openCity(event,'top-posts')">Top Posts</div>
+            <div class="tablink tab-design bttn" onclick="openCity(event,'news')">News</div>
+        </div>
+                  
+            <div id="my-feed" class="tab">
+                <div id="div-for-twitch">
+                    Pagination for Twtich clips/streams?
+                </div>
+                <div id="wrapper">
+                    <div id="holder">
+                        <div id="div-for-postbar">
+                            Simple form/input field
+                        </div>
+                        <div id="div-for-results">
+                            Needs info from server-side
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                            <br>
+                            .
+                        </div>
+                    </div>
+                    <div id="profile-holder">
+                        <div id="div-for-profile">
+                            Username
+                            <br>
+                            <img src="favicon.png">
+                            <br>
+                            BLah Blah Blah
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="my-stats" class="tab" style="display: none">
+                <div id="div-for-stats">
+                    Needs info from api(s)
+                </div>
+            </div>
+        
+            <div id="top-posts" class="tab" style="display:none">
+                <div id="div-for-posts">
+                    Need to determine layout for posts
+                </div>
+            </div>
+        
+            <div id="news" class="tab" style="display:none">
+                <div id="div-for-news">
+                    <div id="title"></div>
+                    <a id="link" target="_blank" class="link-bttn"><img id="photo"></img></a>
+                    
+                    <div id="desc-holder">
+                        <div id="description"></div>
+                        
+                    </div>
+                    
+                    <br>
+                    Credit for API
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <div id="links">
+
+            <a href="home.html"> Home </a>
+            |
+            <a href="home.html"> About </a>
+            |
+            <a href="home.html"> API Links </a>
+            |
+            <a href="home.html"> Privacy Policy </a>
+            |
+            <a href="home.html"> Login </a>
+            |
+            &#169; LAGG 2019
+        
+        </div>
+
+    </div>
+
+    <script>
+
+        var url = 'https://newsapi.org/v2/everything?' +
+                'q=Rainbow+6+Siege&' +
+                'sortBy=popularity&' +
+                'apiKey=161b9494907047dcabeff40d6eab76f1';
+
+        var req = new Request(url);
+
+        fetch(req)
+        .then((resp) => resp.json())
+        .then(function(data) {
+            console.log(data);
+            $("#title").text(data.articles[1].title);
+            $("#description").text(data.articles[1].description);
+            $("#photo").attr("src", data.articles[1].urlToImage);
+            $("#link").attr("href", data.articles[1].url);
+        });
+
+        function openCity(evt, cityName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("tab");
+            for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active-tab";
+        }
+    </script>
+
+  </body>
+
+</html>
