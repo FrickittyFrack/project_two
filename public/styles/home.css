@@ -1,0 +1,202 @@
+/* font-family: 'Baloo Chettan', cursive;
+font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+    background-image: url("../purple-test.png"), url("../green-test.png");
+    background-position: 100% -40%, 0% 146%;
+    background-attachment: fixed, fixed;
+    background-repeat: no-repeat,  no-repeat;
+    background-size: contain;
+    background-color: #232323 !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: "Roboto", sans-serif;
+}
+
+/* --------------------------------------------------------
+-----------------------Nav Bar CSS-------------------------
+----------------------------------------------------------- */
+
+/* #top-pic {
+    height: 428px;
+    width: 100%;
+    background-image: url("../purple-test.png");
+    background-size: 100% 100%;
+    background-position: 100% -40%;
+    background-attachment: fixed;
+} */
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.dropdown-content {
+    overflow: visible;
+    display: none;
+    position: relative;
+    background-color: #565656;
+    min-width: 120px;
+    font-size: 13px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-item {
+    padding: 10px;
+    width: 85%;
+}
+
+.dropdown-item:hover {
+    background-color: #2b2a2a;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav {
+    text-decoration: none;
+    float: left;
+    padding: 15px 25px 10px 25px !important;
+}
+
+.name {
+    font-family: "Baloo Chettan";
+    font-size: 28px;
+    text-decoration: none;
+    float: left;
+    padding: 5px 25px 5px 25px;
+}
+
+.menu {
+    position: relative;
+    float: right;
+}
+
+/* --------------------------------------------------------
+-----------------------Desc Box CSS------------------------
+----------------------------------------------------------- */
+
+#desc-box {
+    background-image: url("../gaming2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #000000;
+    font-family: "Baloo Chettan", cursive;
+    height: 500px;
+    width: 70%;
+    padding: 35px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#inner-div {
+    position: relative;
+    top: 19%;
+    height: 50px;
+    padding: 15px;
+    float: left;
+}
+
+#icons {
+    text-align: center;
+    float: left;
+    padding: 10px;
+}
+
+#descriptions {
+    float: left;
+    padding: 10px 0px 10px 0px;
+}
+
+.space {
+    padding: 15px;
+}
+
+.desc-space {
+    padding: 18px 0px 22px 0px;
+}
+
+/* --------------------------------------------------------
+-----------------------Buttons CSS-------------------------
+----------------------------------------------------------- */
+
+#btn-div {
+    position: relative;
+    top: 19%;
+    height: 50px;
+    text-align: center;
+    padding: 30px 70px 30px 0px;
+    float: right;
+}
+
+.text-size {
+    font-size: 30px;
+}
+
+i {
+    padding: 0px 5px 0px 5px;
+}
+
+#login {
+    background-color: #9449ae;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    padding: 5px;
+    margin: 40px 5px 30px 20px;
+}
+
+#login:hover {
+    background-color: #81309c;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#signup {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 200px;
+    padding: 5px;
+    margin: 0px 5px 30px 20px;
+}
+
+#signup:hover {
+    background-color: rgb(119, 116, 116);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* --------------------------------------------------------
+-----------------------Footer CSS--------------------------
+----------------------------------------------------------- */
+
+#footer {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    color: inherit !important;
+}
+
+/* --------------------------------------------------------
+-------------------------Misc CSS--------------------------
+----------------------------------------------------------- */
+
+.btn:hover {
+    cursor: pointer;
+}

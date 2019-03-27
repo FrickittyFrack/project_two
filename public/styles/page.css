@@ -1,0 +1,306 @@
+/* font-family: 'Baloo Chettan', cursive;
+font-family: 'Rubik', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+    background-image: url("../purple-test.png"), url("../green-test.png");
+    background-position: 100% -40%, 0% 146%;
+    background-attachment: fixed, fixed;
+    background-repeat: no-repeat,  no-repeat;
+    background-size: contain;
+    background-color: #232323 !important;
+    color: rgb(255, 255, 255) !important;
+    font-family: "Roboto", sans-serif;
+}
+
+/* --------------------------------------------------------
+-----------------------Nav Bar CSS-------------------------
+----------------------------------------------------------- */
+
+/* #top-pic {
+    height: 428px;
+    width: 100%;
+    background-image: url("../purple-test.png");
+    background-size: 100% 100%;
+    background-position: 100% -40%;
+    background-attachment: fixed;
+} */
+
+.nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+  
+.dropdown-content {
+    overflow: visible;
+    display: none;
+    position: relative;
+    background-color: #565656;
+    min-width: 120px;
+    font-size: 13px;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-item {
+    padding: 10px;
+    width: 85%;
+}
+
+.dropdown-item:hover {
+    background-color: #2b2a2a;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav {
+    text-decoration: none;
+    float: left;
+    padding: 15px 25px 10px 25px !important;
+}
+
+.name {
+    font-family: "Baloo Chettan";
+    font-size: 28px;
+    text-decoration: none;
+    float: left;
+    padding: 5px 25px 5px 25px;
+}
+
+.menu {
+    position: relative;
+    float: right;
+}
+
+/* --------------------------------------------------------
+-----------------------Container CSS-----------------------
+----------------------------------------------------------- */
+
+#container-for-page {
+    margin: 0 auto;
+    position: sticky;
+    left: 7%;
+    width: 85%;
+    height: 600px;
+    padding: 10px 0px 40px 0px;
+}
+
+
+/* --------------------------------------------------------
+--------------------------Tab CSS--------------------------
+----------------------------------------------------------- */
+
+.tablink {
+    float: left;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+.tab-design {
+    background-color: black;
+    color: white;
+    margin-top: 6px;
+}
+
+.active-tab {
+    background-color: white;
+    color: black;
+    height: 40px;
+    margin-top: 0px;
+}
+
+
+/* --------------------------------------------------------
+---------------------Tab Container CSS---------------------
+----------------------------------------------------------- */
+
+.tab {
+    clear: both;
+    background-color: #565656;
+    border: solid 3px #686767;
+    margin: 0 auto;
+    padding: 15px;
+    overflow: scroll;
+    height: 100%;
+}
+
+#div-for-twitch {
+    width: 95%;
+    background-color: #747474;
+    padding: 20px;
+    margin: 10px auto 45px auto;
+}
+
+#div-for-profile {
+    display: inline-block;
+    position: relative;
+    background-color: #747474;
+    border: solid 1px red;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+#profile-holder {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    width: 30%;
+}
+
+#holder {
+    display: inline-block;
+    position: relative;
+    width: 65%;
+}
+
+#div-for-postbar {
+    background-color: #747474;
+    border: solid 1px red;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+#div-for-results {
+    background-color: #747474;
+    border: solid 1px red;
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+}
+
+#div-for-stats {
+    display: inline-block;
+    position: relative;
+    background-color: #747474;
+    border: solid 1px red;
+    padding: 20px;
+    margin: 10px;
+    width: 23%;
+}
+
+/* --------------------------------------------------- */
+
+#title {
+    font-size: 20px;
+}
+
+#photo {
+    max-width: 400px;
+}
+
+#desc-holder {
+    background-color: #aaaaaa;
+    padding: 10px;
+    margin: 10px;
+}
+
+#description {
+    color: black;
+}
+
+/* #link {
+    text-decoration: none;
+    background-color: #81309c;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+
+} */
+
+/* --------------------------------------------------------
+-----------------------Buttons CSS-------------------------
+----------------------------------------------------------- */
+
+#btn-div {
+    position: relative;
+    top: 19%;
+    height: 50px;
+    text-align: center;
+    padding: 30px 70px 30px 0px;
+    float: right;
+}
+
+.text-size {
+    font-size: 30px;
+}
+
+i {
+    padding: 0px 5px 0px 5px;
+}
+
+#login {
+    background-color: #9449ae;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    padding: 5px;
+    margin: 40px 5px 30px 20px;
+}
+
+#login:hover {
+    background-color: #81309c;
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+#signup {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 200px;
+    padding: 5px;
+    margin: 0px 5px 30px 20px;
+}
+
+#signup:hover {
+    background-color: rgb(119, 116, 116);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* --------------------------------------------------------
+-----------------------Footer CSS--------------------------
+----------------------------------------------------------- */
+
+#footer {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10px;
+}
+
+a {
+    color: inherit !important;
+}
+
+/* --------------------------------------------------------
+-------------------------Misc CSS--------------------------
+----------------------------------------------------------- */
+
+.bttn {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.bttn:hover {
+    cursor: pointer;
+}
+
+.link-bttn:hover {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}
