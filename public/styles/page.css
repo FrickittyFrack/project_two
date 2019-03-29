@@ -14,7 +14,7 @@ body {
 
 #top-pic {
     height: 200px;
-    background-image: url("../purple-test-large3.png");
+    background-image: url("../images/purple-test-large3.png");
     background-size: 100% 100%;
 }
 
@@ -215,6 +215,11 @@ body {
     float: right;
 }
 
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(86, 0, 143, 0.25) !important;
+}
+
 .text-size {
     font-size: 30px;
 }
@@ -229,7 +234,7 @@ i {
 
 #footer {
     height: 200px;
-    background-image: url("../green-test-large3.png");
+    background-image: url("../images/green-test-large3.png");
     background-size: 100% 100%;
     text-align: center;
     width: 100%;

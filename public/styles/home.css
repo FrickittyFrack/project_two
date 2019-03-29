@@ -14,7 +14,7 @@ body {
 
 #top-pic {
     height: 200px;
-    background-image: url("../purple-test-large3.png");
+    background-image: url("../images/purple-test-large3.png");
     background-size: 100% 100%;
 }
 
@@ -75,7 +75,7 @@ body {
 ----------------------------------------------------------- */
 
 #desc-box {
-    background-image: url("../gaming2.jpg");
+    background-image: url("../images/gaming2.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -280,7 +280,7 @@ i {
 
 #footer {
     height: 200px;
-    background-image: url("../green-test-large3.png");
+    background-image: url("../images/green-test-large3.png");
     background-size: 100% 100%;
     text-align: center;
     width: 100%;
