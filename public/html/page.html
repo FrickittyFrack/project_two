@@ -6,10 +6,10 @@
     <title>LAGG</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
     
     <!-- CSS Link -->
-    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="../styles/page.css">
 
     <!-- Styling -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -64,10 +64,10 @@
     <!-- Container for page -->
     <div id="container-for-page">
         <div id="tab-bar">
-            <div class="tablink tab-design active-tab bttn" onclick="openCity(event,'my-feed')">My Feed</div>
-            <div class="tablink tab-design bttn" onclick="openCity(event,'my-stats')">My Stats</div>
-            <div class="tablink tab-design bttn" onclick="openCity(event,'top-posts')">Top Posts</div>
-            <div class="tablink tab-design bttn" onclick="openCity(event,'news')">News</div>
+            <div class="tablink tab-design active-tab bttn" onclick="tabChanger(event,'my-feed')">My Feed</div>
+            <div class="tablink tab-design bttn" onclick="tabChanger(event,'my-stats')">My Stats</div>
+            <div class="tablink tab-design bttn" onclick="tabChanger(event,'top-posts')">Top Posts</div>
+            <div class="tablink tab-design bttn" onclick="tabChanger(event,'news')">News</div>
         </div>
                   
             <div id="my-feed" class="tab">
@@ -141,7 +141,7 @@
                     <div id="div-for-profile">
                         Username
                         <br>
-                        <img src="favicon.png">
+                        <img src="../images/favicon.png">
                         <br>
                         BLah Blah Blah
                     </div>
@@ -165,11 +165,13 @@
                     <button class="btn game-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Games
                     </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Rainbow 6 Siege</a>
-                        <a class="dropdown-item" href="#">Super Smash Bros</a>
-                        <a class="dropdown-item" href="#">PUBG</a>
-                    </div>
+                    <form>
+                        <div class="dropdown-menu" id="game-dropdown" aria-labelledby="dropdownMenuButton">
+                            <div class="dropdown-item" value="0">Rainbow 6 Siege</div>
+                            <div class="dropdown-item" value="1">Super Smash Bros</div>
+                            <div class="dropdown-item" value="2">PUBG</div>
+                        </div>
+                    </form>
                 </div>
                 <div id="div-for-news"></div>
                 <br>
@@ -200,7 +202,7 @@
     </div>
 
     <!-- Link to Javascipt -->
-    <script src="js/page.js"></script>
+    <script src="../js/page.js"></script>
 
   </body>
 
