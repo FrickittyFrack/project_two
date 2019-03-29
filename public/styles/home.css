@@ -3,11 +3,6 @@ font-family: 'Rubik', sans-serif;
 font-family: 'Roboto', sans-serif; */
 
 body {
-    background-image: url("../purple-test.png"), url("../green-test.png");
-    background-position: 100% -40%, 0% 146%;
-    background-attachment: fixed, fixed;
-    background-repeat: no-repeat,  no-repeat;
-    background-size: contain;
     background-color: #232323 !important;
     color: rgb(255, 255, 255) !important;
     font-family: "Roboto", sans-serif;
@@ -17,14 +12,11 @@ body {
 -----------------------Nav Bar CSS-------------------------
 ----------------------------------------------------------- */
 
-/* #top-pic {
-    height: 428px;
-    width: 100%;
-    background-image: url("../purple-test.png");
+#top-pic {
+    height: 200px;
+    background-image: url("../purple-test-large3.png");
     background-size: 100% 100%;
-    background-position: 100% -40%;
-    background-attachment: fixed;
-} */
+}
 
 .nav-bar {
     list-style-type: none;
@@ -127,6 +119,111 @@ body {
 }
 
 /* --------------------------------------------------------
+-------------------------Modal CSS-------------------------
+----------------------------------------------------------- */
+
+.modal-header {
+    text-align: center !important;
+    padding: 1rem;
+    background: #7617ad;
+}
+
+.modal-title {
+    font-size: 40px !important;
+    color: white;
+    font-family: "Baloo Chettan";
+    font-size: 3rem;
+    letter-spacing: .1rem;
+}
+
+.close {
+    color: white;
+}
+
+/* --------------------------------------------------------
+----------------------Login Modal CSS----------------------
+----------------------------------------------------------- */
+
+.login-modal {
+    float: left;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    height: 80%;
+    width: 35%;
+}
+
+#login-holder {
+    background-color: #565656;
+    padding: 40px;
+}
+
+.login-btn {
+    background-color: #9445c9;
+    color: white;
+    border-radius: 20px !important;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+.login-btn:hover {
+    background-color: #7b39a7;
+}
+
+
+/* --------------------------------------------------------
+---------------------Signup Modal CSS----------------------
+----------------------------------------------------------- */
+
+.signup-modal {
+    float: left;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    height: 80%;
+}
+
+.modal-two {
+    float: left;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    height: 20%;
+}
+
+.modal-title-two {
+    color: white;
+    padding: 15px;
+    font-size: 3rem;
+    letter-spacing: .1rem;
+}
+
+#signup-holder {
+    background-color: #565656;
+    padding: 20px;
+}
+
+.ready-btn {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.ready-btn:hover {
+    background-color: #05521b !important;
+    cursor: pointer;
+}
+
+#modal-footer {
+    background-color: #007d24;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+
+/* --------------------------------------------------------
 -----------------------Buttons CSS-------------------------
 ----------------------------------------------------------- */
 
@@ -148,7 +245,7 @@ i {
 }
 
 #login {
-    background-color: #9449ae;
+    background-color: #9445c9;
     color: white;
     border-radius: 10px;
     width: 200px;
@@ -157,7 +254,7 @@ i {
 }
 
 #login:hover {
-    background-color: #81309c;
+    background-color: #7b39a7;
     color: white;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -182,11 +279,20 @@ i {
 ----------------------------------------------------------- */
 
 #footer {
+    height: 200px;
+    background-image: url("../green-test-large3.png");
+    background-size: 100% 100%;
     text-align: center;
     width: 100%;
     position: fixed;
     bottom: 0;
     padding-bottom: 10px;
+    z-index: -1;
+}
+
+#links {
+    position: relative;
+    bottom: -162px;
 }
 
 a {
