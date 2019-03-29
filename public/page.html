@@ -21,33 +21,47 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto|Rubik" rel="stylesheet">
     
-    <!-- jQuery Links -->
+    <!-- Bootstrap Java Links -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- jQuery Link -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   </head>
 
   <body>
 
     <!-- Nav Bar -->
-    <div class="nav-bar">
+    <div class="nav-bar" id="top-pic">
         <div class="name">LAGG</div>
         <div class="nav btn nav-btn home">Home</div>
         <div class="nav btn nav-btn games">Games</div>
         <div class="nav btn nav-btn following">Following</div>
-        <div class="nav btn nav-btn menu dropdown"><i class="fas fa-2x fa-bars"></i>
+        <!-- <div class="nav btn nav-btn menu dropdown"><i class="fas fa-2x fa-bars"></i>
             <div class="dropdown-content">
                 <div class="dropdown-item">Games</div>
                 <div class="dropdown-item">Settings</div>
                 <hr>
                 <div class="dropdown-item">Login</div>
             </div>
-        </div>
+        </div> -->
+                <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-2x fa-bars"></i>
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Games</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Login</a>
+                </div>
+              </div>
     </div>
 
     <!-- Container for page -->
-    <!-- News api key
-    161b9494907047dcabeff40d6eab76f1 -->
     <div id="container-for-page">
         <div id="tab-bar">
             <div class="tablink tab-design active-tab bttn" onclick="openCity(event,'my-feed')">My Feed</div>
@@ -60,71 +74,76 @@
                 <div id="div-for-twitch">
                     Pagination for Twtich clips/streams?
                 </div>
-                <div id="wrapper">
-                    <div id="holder">
-                        <div id="div-for-postbar">
-                            Simple form/input field
-                        </div>
-                        <div id="div-for-results">
-                            Needs info from server-side
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                            <br>
-                            .
-                        </div>
+                <div id="holder">
+                    <div id="div-for-postbar">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">What's up?</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
+                                <small id="emailHelp" class="form-text text-muted"></small>
+                            </div>
+                            <button type="submit" class="btn purple">Post</button>
+                        </form>
                     </div>
-                    <div id="profile-holder">
-                        <div id="div-for-profile">
-                            Username
-                            <br>
-                            <img src="favicon.png">
-                            <br>
-                            BLah Blah Blah
-                        </div>
+                    <div id="div-for-results">
+                        Needs info from server-side
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                        <br>
+                        .
+                    </div>
+                </div>
+                <div id="profile-holder">
+                    <div id="div-for-profile">
+                        Username
+                        <br>
+                        <img src="favicon.png">
+                        <br>
+                        BLah Blah Blah
                     </div>
                 </div>
             </div>
@@ -142,18 +161,19 @@
             </div>
         
             <div id="news" class="tab" style="display:none">
-                <div id="div-for-news">
-                    <div id="title"></div>
-                    <a id="link" target="_blank" class="link-bttn"><img id="photo"></img></a>
-                    
-                    <div id="desc-holder">
-                        <div id="description"></div>
-                        
+                <div class="dropdown game-selection">
+                    <button class="btn game-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Games
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Rainbow 6 Siege</a>
+                        <a class="dropdown-item" href="#">Super Smash Bros</a>
+                        <a class="dropdown-item" href="#">PUBG</a>
                     </div>
-                    
-                    <br>
-                    Credit for API
                 </div>
+                <div id="div-for-news"></div>
+                <br>
+                <a href="https://newsapi.org">Powered by News API</a>
             </div>
         </div>
     </div>
@@ -179,39 +199,8 @@
 
     </div>
 
-    <script>
-
-        var url = 'https://newsapi.org/v2/everything?' +
-                'q=Rainbow+6+Siege&' +
-                'sortBy=popularity&' +
-                'apiKey=161b9494907047dcabeff40d6eab76f1';
-
-        var req = new Request(url);
-
-        fetch(req)
-        .then((resp) => resp.json())
-        .then(function(data) {
-            console.log(data);
-            $("#title").text(data.articles[1].title);
-            $("#description").text(data.articles[1].description);
-            $("#photo").attr("src", data.articles[1].urlToImage);
-            $("#link").attr("href", data.articles[1].url);
-        });
-
-        function openCity(evt, cityName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("tab");
-            for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < x.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.className += " active-tab";
-        }
-    </script>
+    <!-- Link to Javascipt -->
+    <script src="js/page.js"></script>
 
   </body>
 
