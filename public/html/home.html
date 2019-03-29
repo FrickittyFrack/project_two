@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>LAGG</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../styles/home.css">
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto|Rubik" rel="stylesheet">
+    
+    <!-- jQuery Links -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Nav Bar -->
+    <div class="nav-bar" id="top-pic">
+        <div class="name">LAGG</div>
+        <div class="nav btn nav-btn home">Home</div>
+        <div class="nav btn nav-btn login">Login</div>
+        <div class="nav btn nav-btn menu dropdown"><i class="fas fa-2x fa-bars"></i>
+            <div class="dropdown-content">
+                <div class="dropdown-item">Games</div>
+                <div class="dropdown-item">Settings</div>
+                <hr>
+                <div class="dropdown-item">Login</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Descriptive Box -->
+    <div id="desc-box">
+        <div id="inner-div">
+            <div id="icons">
+                <div><i class="fas space fa-2x fa-user-ninja"></i></div>
+                <div><i class="fas space fa-2x fa-gamepad"></i></div>
+                <div><i class="fas space fa-2x fa-poll"></i></div>
+                <div><i class="fas space fa-2x fa-comment"></i></div>
+            </div>
+            <div id="descriptions">
+                <div class="desc-space">Follow your people</div>
+                <div class="desc-space">Stay updated with your games</div>
+                <div class="desc-space">Check your stats</div>
+                <div class="desc-space">Show off and share</div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div id="btn-div">
+            <div class="text-size"><i>Ready</i> up!</div>
+            <div id="login" class="btn home-btn" data-toggle="modal" data-target=".login-modal">Login</div>
+            <br>
+            <div id="signup" class="btn home-btn" data-toggle="modal" data-target=".signup-modal">Sign-up</div>
+        </div>
+
+    </div>
+
+    <!-- Login Modal -->
+    <div id="pop-up" class="modal login-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Welcome back...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="login-holder">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username">
+                            <small id="emailHelp" class="form-text text-muted small-txt">If you don't remember, you're SOL</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <br>
+                        <button type="submit" class="login-btn btn">Login</button>
+                    </form>
+                </div>
+                <div id="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Singup Modal -->
+    <div id="pop-up" class="modal signup-modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">No turning back now...</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Enter Info Section -->
+                <div id="signup-holder">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Choose a Username</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Choose a Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                        
+                    </form>
+                </div>
+                <div id="modal-footer" class="ready-btn">
+                    <div id="signup-submit" data-toggle="modal" data-target=".second-modal" data-dismiss="modal">I'm Ready?</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Modal (Signup) -->
+    <div id="pop-up" class="modal modal-two fade bd-example-modal-lg second-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title-two" id="exampleModalCenterTitle"><strong>You're ours now</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+
+        <div id="links">
+
+            <a href="home.html"> Home </a>
+            |
+            <a href="home.html"> About </a>
+            |
+            <a href="home.html"> API Links </a>
+            |
+            <a href="home.html"> Privacy Policy </a>
+            |
+            <a href="home.html"> Login </a>
+            |
+            &#169; LAGG 2019
+        
+        </div>
+
+    </div>
+
+  </body>
+
+</html>

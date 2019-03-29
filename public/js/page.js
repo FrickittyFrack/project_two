@@ -1,5 +1,9 @@
 $(document).ready(function () {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> c23a8da0207d48e48d6d5a7ac32e8ab47997931c
     var url = 'https://newsapi.org/v2/everything?' +
             'q=Rainbow+6+Siege&' +
             'sortBy=popularity&' +
@@ -55,6 +59,7 @@ $(document).ready(function () {
     });
 });
 
+<<<<<<< HEAD
 function openCity(evt, cityName) {
     var i, x, tablinks;
     x = document.getElementsByClassName("tab");
@@ -67,4 +72,18 @@ function openCity(evt, cityName) {
     }
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active-tab";
+=======
+function tabChanger(evt, cityName) {
+        var i, x, tablinks;
+        x = document.getElementsByClassName("tab");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < x.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active-tab";
+>>>>>>> c23a8da0207d48e48d6d5a7ac32e8ab47997931c
 };
