@@ -1,7 +1,11 @@
 $(document).ready(function () {
 
+    // Setting News to Default to R6
+
     var siege = "q=Rainbow+6+Siege&";
     newsAPI(siege);
+
+    // News API
 
     function newsAPI(game) {
 
@@ -21,12 +25,16 @@ $(document).ready(function () {
             
             for(var i = 1; i < 15; i++) {
 
+                // Creating object to save news elements
+
                 var newNews = {
                     title: data.articles[i].title,
                     info: data.articles[i].description,
                     photo: data.articles[i].urlToImage,
                     link: data.articles[i].url
                 };
+
+                // Creating a div for each article
 
                 var newArticle = $("<div>");
 
@@ -43,8 +51,6 @@ $(document).ready(function () {
                 newLink.append(newPhoto);
                 newPhoto.attr("id", "photo");
                 newPhoto.attr("src", newNews.photo);
-
-                
                 
                 newLink.attr("id", "link");
                 newLink.attr("target", "_blank");
@@ -61,6 +67,8 @@ $(document).ready(function () {
             };
         });
     };
+
+    // Dropdown for News API
 
     $("select").on("change", function() {
 
@@ -118,32 +126,51 @@ $(document).ready(function () {
 
 });
 
-// function switchMe() {
-//     var dropDown = document.getElementById("game-dropdown");
+// Twitch Link API
 
-//     var input = dropDown.value;
+var url1 =  '/api/streams';
+        
+var req = new Request(url1);
+    fetch(req)
+    .then((resp) => resp.json())
+    .then(function(data) {
+        console.log(data);
 
-//     console.log(input);
+        for (var i = 0; i < 10; i++) {
 
-//     switch(input) {
-//         case "0":
-//         var siege = "q=Rainbow+6+Siege&";
-//         newAPI(siege);
-//         break;
+            // Setting size to thumbnail imgs
 
-//         case "1":
-//         var smash = "q=Super+Smash+bros&";
-//         newAPI(smash);
-//         break;
+            var thumbnail = data.thumbnails[i];
 
-//         case "2":
-//         var pubg = "q=PUBG&";
-//         newAPI(pubg);
-//         break;
-//     };
-// };
+            var streamers = data.streamers[i];
+            
+            console.log(thumbnail);
+            
+            var twitch = $("<img>");
+            
+            twitch.attr("id", "thumb");
+            twitch.attr("src", thumbnail);
+            
+            console.log(data);
+            console.log(thumbnail);
+            
+            $("#div-for-twitch").append(twitch);
 
-function tabChanger(evt, cityName) {
+            console.log(streamers);
+            
+            var stream = $("<div>");
+            
+            stream.attr("id", "streams");
+            stream.text(streamers);
+            
+            $("#div-for-twitch").append(streamers)
+            
+            };
+        });
+
+// Logic for tabs
+
+function tabChanger(evt, section) {
     var i, x, tablinks;
     x = document.getElementsByClassName("tab");
     for (i = 0; i < x.length; i++) {
@@ -153,6 +180,6 @@ function tabChanger(evt, cityName) {
     for (i = 0; i < x.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
     }
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(section).style.display = "block";
     evt.currentTarget.className += " active-tab";
 };
