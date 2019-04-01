@@ -138,8 +138,6 @@ var req = new Request(url1);
 
         for (var i = 0; i < 10; i++) {
 
-            // Setting size to thumbnail imgs
-
             var thumbnail = data.thumbnails[i];
 
             var streamers = data.streamers[i];
