@@ -4,7 +4,7 @@ font-family: 'Roboto', sans-serif; */
 
 body {
     background-color: #232323 !important;
-    color: rgb(255, 255, 255) !important;
+    color: rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
 }
 
@@ -290,4 +290,9 @@ a {
 hr.line {
     border-top: 1px solid white;
     max-width: 700px;
+}
+
+.list-group-item {
+    color: white;
+    background-color: #747474;
 }
