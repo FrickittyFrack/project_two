@@ -195,10 +195,23 @@ body {
 
 .game-selection {
     text-align: right;
+    margin-bottom: 10px;
 }
 
-.game-btn {
+#game-dropdown {
     background-color: #a506ff;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+#game-dropdown:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(86, 0, 143, 0.25) !important;
+}
+
+.game-item {
     color: white;
 }
 
@@ -213,11 +226,6 @@ body {
     text-align: center;
     padding: 30px 70px 30px 0px;
     float: right;
-}
-
-.btn:focus {
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(86, 0, 143, 0.25) !important;
 }
 
 .text-size {
