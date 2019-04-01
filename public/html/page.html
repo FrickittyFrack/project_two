@@ -71,79 +71,93 @@
         </div>
                   
             <div id="my-feed" class="tab">
+                <!-- Twitch -->
                 <div id="div-for-twitch">
                     Pagination for Twtich clips/streams?
                 </div>
-                <div id="holder">
-                    <div id="div-for-postbar">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">What's up?</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
-                                <small id="emailHelp" class="form-text text-muted"></small>
+                <!-- Postbar -->
+                <div class="container" id="holder">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="row" id="div-for-postbar">
+                                <div class="col">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">What's up?</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <button type="submit" class="btn purple">Post</button>
+                                    </form>
+                                </div>
                             </div>
-                            <button type="submit" class="btn purple">Post</button>
-                        </form>
-                    </div>
-                    <div id="div-for-results">
-                        Needs info from server-side
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                    </div>
-                </div>
-                <div id="profile-holder">
-                    <div id="div-for-profile">
-                        Username
-                        <br>
-                        <img src="../images/favicon.png">
-                        <br>
-                        BLah Blah Blah
+                            <!-- Results/Feed -->
+                            <div class="row" id="result-holder">
+                                <div class="col" id="div-for-results">
+                                    Needs info from server-side
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Profile -->
+                        <div class="col-4" id="profile-holder">
+                            <div id="div-for-profile">
+                                Username
+                                <br>
+                                <img src="../images/favicon.png">
+                                <br>
+                                <div id="user-info">
+                                    BLah Blah Blah
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -161,17 +175,18 @@
             </div>
         
             <div id="news" class="tab" style="display:none">
-                <div class="dropdown game-selection">
-                    <button class="btn game-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Games
-                    </button>
-                    <form>
-                        <div class="dropdown-menu" id="game-dropdown" aria-labelledby="dropdownMenuButton">
-                            <div class="dropdown-item" value="0">Rainbow 6 Siege</div>
-                            <div class="dropdown-item" value="1">Super Smash Bros</div>
-                            <div class="dropdown-item" value="2">PUBG</div>
-                        </div>
-                    </form>
+                <div class="game-selection">
+                    <select id="game-dropdown">
+                        <option class="game-item" value="0">Rainbow 6 Siege</option>
+                        <option class="game-item" value="1">Super Smash Bros</option>
+                        <option class="game-item" value="2">PUBG</option>
+                        <option class="game-item" value="3">Fortnite</option>
+                        <option class="game-item" value="4">Red Dead Redemption</option>
+                        <option class="game-item" value="5">World of Warcraft</option>
+                        <option class="game-item" value="6">Tom Clancy's: The Division</option>
+                        <option class="game-item" value="7">Overwatch</option>
+                        <option class="game-item" value="8">Assassin's Creed</option>
+                    </select>
                 </div>
                 <div id="div-for-news"></div>
                 <br>
