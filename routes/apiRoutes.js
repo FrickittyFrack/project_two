@@ -4,11 +4,11 @@ var path = require("path");
 
 module.exports = function (app) {
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/page.html"));
+    res.sendFile(path.join(__dirname, "../public/html/page.html"));
   });
 
   app.get("/login", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/html/home.html"));
   });
 
   // Get all examples

@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>LAGG</title>
-    
+
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="../images/favicon.png">
-    
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="../styles/page.css">
 
     <!-- Styling -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Roboto|Rubik" rel="stylesheet">
-    
+
     <!-- Bootstrap Java Links -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../styles/page.css">
 
     <!-- jQuery Link -->
     <script src="https://code.jquery.com/jquery.js"></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- Nav Bar -->
     <div class="nav-bar" id="top-pic">
@@ -47,18 +54,19 @@
                 <div class="dropdown-item">Login</div>
             </div>
         </div> -->
-                <div class="dropdown">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-2x fa-bars"></i>
-                </a>
-              
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Games</a>
-                  <a class="dropdown-item" href="#">Settings</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Login</a>
-                </div>
-              </div>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-2x fa-bars"></i>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Games</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Login</a>
+            </div>
+        </div>
     </div>
 
     <!-- Container for page -->
@@ -69,130 +77,139 @@
             <div class="tablink tab-design bttn" onclick="tabChanger(event,'top-posts')">Top Posts</div>
             <div class="tablink tab-design bttn" onclick="tabChanger(event,'news')">News</div>
         </div>
-                  
-            <div id="my-feed" class="tab">
-                <!-- Twitch -->
-                <div id="div-for-twitch">
-                    Pagination for Twtich clips/streams?
-                </div>
-                <!-- Postbar -->
-                <div class="container" id="holder">
-                    <div class="row">
-                        <div class="col-8">
-                            <div class="row" id="div-for-postbar">
-                                <div class="col">
-                                    <form>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail1">What's up?</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
-                                            <small id="emailHelp" class="form-text text-muted"></small>
-                                        </div>
-                                        <button type="submit" class="btn purple">Post</button>
-                                    </form>
-                                </div>
+
+        <div id="my-feed" class="tab">
+            <!-- Twitch -->
+            <div id="div-for-twitch">
+                Pagination for Twtich clips/streams?
+            </div>
+            <!-- Postbar -->
+            <div class="container" id="holder">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row" id="div-for-postbar">
+                            <div class="col">
+                                <form method="post">
+                                    <label for="example-description">Face check!</label>
+                                    <textarea class="form-control" id="example-description"
+                                        aria-describedby="example-description"
+                                        placeholder="What's on your mind?"></textarea>
                             </div>
-                            <!-- Results/Feed -->
-                            <div class="row" id="result-holder">
-                                <div class="col" id="div-for-results">
-                                    Needs info from server-side
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                    <br>
-                                    .
-                                </div>
-                            </div>
+                            <button id="submit" class="btn btn-primary purple float-right">Submit</button>
+                            </form>
                         </div>
-                        <!-- Profile -->
-                        <div class="col-4" id="profile-holder">
-                            <div id="div-for-profile">
-                                Username
+                    </div>
+                    <!-- Results/Feed -->
+                    <div class="row" id="result-holder">
+                        <div class="col" id="div-for-results">
+                            <h3>News Feed:</h3>
+                            <ul id="example-list" class="list-group" style="background-color: dimgray;">
+
+                                <li data-id="{{{this.id}}" class="list-group-item">
+                                    <a href="example/{{{this.id}}}">{{{this.text}}}</a>
+                                    <button class="btn btn-danger float-right delete">
+                                        <span class="glyphicon glyphicon-trash"></span>ｘ</button>
+                                </li>
+
+                                Needs info from server-side
                                 <br>
-                                <img src="../images/favicon.png">
+                                .
                                 <br>
-                                <div id="user-info">
-                                    BLah Blah Blah
-                                </div>
-                            </div>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                                <br>
+                                .
+                        </div>
+                    </div>
+                </div>
+                <!-- Profile -->
+                <div class="col-4" id="profile-holder">
+                    <div id="div-for-profile">
+                        Username
+                        <br>
+                        <img src="../images/favicon.png">
+                        <br>
+                        <div id="user-info">
+                            BLah Blah Blah
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div id="my-stats" class="tab" style="display: none">
-                <div id="div-for-stats">
-                    Needs info from api(s)
-                </div>
-            </div>
-        
-            <div id="top-posts" class="tab" style="display:none">
-                <div id="div-for-posts">
-                    Need to determine layout for posts
-                </div>
-            </div>
-        
-            <div id="news" class="tab" style="display:none">
-                <div class="game-selection">
-                    <select id="game-dropdown">
-                        <option class="game-item" value="0">Rainbow 6 Siege</option>
-                        <option class="game-item" value="1">Super Smash Bros</option>
-                        <option class="game-item" value="2">PUBG</option>
-                        <option class="game-item" value="3">Fortnite</option>
-                        <option class="game-item" value="4">Red Dead Redemption</option>
-                        <option class="game-item" value="5">World of Warcraft</option>
-                        <option class="game-item" value="6">Tom Clancy's: The Division</option>
-                        <option class="game-item" value="7">Overwatch</option>
-                        <option class="game-item" value="8">Assassin's Creed</option>
-                    </select>
-                </div>
-                <div id="div-for-news"></div>
-                <br>
-                <a href="https://newsapi.org">Powered by News API</a>
-            </div>
         </div>
+    </div>
+
+    <div id="my-stats" class="tab" style="display: none">
+        <div id="div-for-stats">
+            Needs info from api(s)
+        </div>
+    </div>
+
+    <div id="top-posts" class="tab" style="display:none">
+        <div id="div-for-posts">
+            Need to determine layout for posts
+        </div>
+    </div>
+
+    <div id="news" class="tab" style="display:none">
+        <div class="game-selection">
+            <select id="game-dropdown">
+                <option class="game-item" value="0">Rainbow 6 Siege</option>
+                <option class="game-item" value="1">Super Smash Bros</option>
+                <option class="game-item" value="2">PUBG</option>
+                <option class="game-item" value="3">Fortnite</option>
+                <option class="game-item" value="4">Red Dead Redemption</option>
+                <option class="game-item" value="5">World of Warcraft</option>
+                <option class="game-item" value="6">Tom Clancy's: The Division</option>
+                <option class="game-item" value="7">Overwatch</option>
+                <option class="game-item" value="8">Assassin's Creed</option>
+            </select>
+        </div>
+        <div id="div-for-news"></div>
+        <br>
+        <a href="https://newsapi.org">Powered by News API</a>
+    </div>
+    </div>
     </div>
 
     <!-- Footer -->
@@ -211,14 +228,14 @@
             <a href="home.html"> Login </a>
             |
             &#169; LAGG 2019
-        
+
         </div>
 
     </div>
 
     <!-- Link to Javascipt -->
     <script src="../js/page.js"></script>
-
-  </body>
+    <script src="../js/index.js"></script>
+</body>
 
 </html>
