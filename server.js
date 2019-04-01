@@ -27,6 +27,26 @@ require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
+var RainbowSixApi = require('rainbowsix-api-node');
+var R6 = new RainbowSixApi();
+ 
+var username = "";
+var platform = "uplay";
+ 
+//Get stats on the user on that platform
+R6.stats(username, platform).then(response => {
+    console.log(response);
+}).catch(error => {
+    console.error(error)
+});
+ 
+//For getting details about a user on R6 depending on platform
+R6.profile(username, platform).then(response => {
+    console.log(response);
+}).catch(error => {
+    console.error(error);
+});
+
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
