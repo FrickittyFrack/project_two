@@ -38,17 +38,13 @@ body {
     z-index: 1;
 }
 
-.dropdown-item {
-    padding: 10px;
-    width: 85%;
+.dropping-down {
+    float: right;
 }
 
-.dropdown-item:hover {
-    background-color: #2b2a2a;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown-color-change {
+    background-color: transparent !important;
+    border: transparent !important;
 }
 
 .nav {
