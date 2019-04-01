@@ -143,6 +143,8 @@ var req = new Request(url1);
             var streamers = data.streamers[i];
             
             console.log(thumbnail);
+
+            // Div creation
             
             var twitch = $("<img>");
             
