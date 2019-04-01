@@ -1,4 +1,5 @@
 var db = require("../models");
+var request = require("superagent");
 
 var path = require("path");
 
@@ -34,4 +35,22 @@ module.exports = function (app) {
       res.json(dbExample);
     });
   });
+
+  app.get('/api/streams', function(req, response) {
+    request.get('https://api.twitch.tv/helix/streams?first=10')
+      .set('Client-ID', '7s8focd6za4eodq2al6ugvgrrqhjur')
+      .then(function(res){
+        var info = res.body.data;
+        var results = {
+          thumbnails: info.map(function(d) {
+            return d.thumbnail_url.replace("{width}","200").replace("{height}","250");
+          }),
+          streamers: info.map(function(d) {
+            return d.user_name;
+          })
+        };
+
+        response.json(results);
+      })
+  })
 };

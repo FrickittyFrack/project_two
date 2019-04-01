@@ -118,30 +118,35 @@ $(document).ready(function () {
 
 });
 
-// function switchMe() {
-//     var dropDown = document.getElementById("game-dropdown");
+var url1 =  '/api/streams';
+        
+var req = new Request(url1);
+fetch(req)
+.then((resp) => resp.json())
+.then(function(data) {
+    console.log(data);
 
-//     var input = dropDown.value;
+  
 
-//     console.log(input);
+    for (var i = 0; i < 10; i++) {
+      var thumbnail = data.thumbnails[i].replace("{width}","400").replace("{height}","400")
+      var streamers = data.streamers[i]
+      console.log(thumbnail)
+      var twitch = $('<img>');
+      twitch.attr("id", "thumb") ;
+      twitch.attr("src", thumbnail);
+      console.log(data)
+      console.log(thumbnail);
+      $("#div-for-twitch").append(twitch);
 
-//     switch(input) {
-//         case "0":
-//         var siege = "q=Rainbow+6+Siege&";
-//         newAPI(siege);
-//         break;
+      console.log(streamers)
+      var stream = $('<div>');
+      stream.attr("id", "streams");
+      stream.text(streamers);
+      $("#div-for-twitch").append(streamers)
+     }
+  })
 
-//         case "1":
-//         var smash = "q=Super+Smash+bros&";
-//         newAPI(smash);
-//         break;
-
-//         case "2":
-//         var pubg = "q=PUBG&";
-//         newAPI(pubg);
-//         break;
-//     };
-// };
 
 function tabChanger(evt, cityName) {
     var i, x, tablinks;
