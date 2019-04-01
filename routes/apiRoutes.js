@@ -12,6 +12,20 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 
+<<<<<<< HEAD
+=======
+var path = require("path");
+
+module.exports = function (app) {
+  app.get("/", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/page.html"));
+  });
+
+  app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+
+>>>>>>> d4064fc3c0d915fe8bedee82c25cbff96bba7cd6
   // Get all examples
   app.get("/api/page", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {

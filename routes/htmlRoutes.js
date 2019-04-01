@@ -4,6 +4,7 @@ var path = require("path");
 module.exports = function (app) {
   // Load index page
 <<<<<<< HEAD
+<<<<<<< HEAD
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/home.html"));
   });
@@ -11,6 +12,8 @@ module.exports = function (app) {
   app.get("/page", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/html/page.html"));
 =======
+=======
+>>>>>>> d4064fc3c0d915fe8bedee82c25cbff96bba7cd6
   app.get("/", function (req, res) {
     db.Example.findAll({}).then(function (dbExamples) {
       res.render("page", {
