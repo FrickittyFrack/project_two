@@ -123,38 +123,37 @@ body {
 }
 
 #div-for-profile {
-    display: inline-block;
-    position: relative;
+    text-align: center;
     background-color: #747474;
     padding: 20px;
     margin: 10px;
     width: 100%;
 }
 
-#profile-holder {
-    display: inline-block;
-    position: relative;
-    top: 0px;
-    width: 30%;
+#user-info {
+    text-align: left;
+}
+
+#result-holder {
+    margin-top: 10px;
 }
 
 #holder {
-    display: inline-block;
-    position: relative;
-    width: 65%;
+    width: 100%;
 }
 
 #div-for-postbar {
     background-color: #747474;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0px;
     width: 100%;
+    height: 22%;
 }
 
 #div-for-results {
     background-color: #747474;
     padding: 20px;
-    margin: 10px;
+    margin: 16px;
     width: 100%;
 }
 

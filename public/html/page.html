@@ -71,79 +71,93 @@
         </div>
                   
             <div id="my-feed" class="tab">
+                <!-- Twitch -->
                 <div id="div-for-twitch">
                     Pagination for Twtich clips/streams?
                 </div>
-                <div id="holder">
-                    <div id="div-for-postbar">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">What's up?</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
-                                <small id="emailHelp" class="form-text text-muted"></small>
+                <!-- Postbar -->
+                <div class="container" id="holder">
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="row" id="div-for-postbar">
+                                <div class="col">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">What's up?</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter text...">
+                                            <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                        <button type="submit" class="btn purple">Post</button>
+                                    </form>
+                                </div>
                             </div>
-                            <button type="submit" class="btn purple">Post</button>
-                        </form>
-                    </div>
-                    <div id="div-for-results">
-                        Needs info from server-side
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                        <br>
-                        .
-                    </div>
-                </div>
-                <div id="profile-holder">
-                    <div id="div-for-profile">
-                        Username
-                        <br>
-                        <img src="../images/favicon.png">
-                        <br>
-                        BLah Blah Blah
+                            <!-- Results/Feed -->
+                            <div class="row" id="result-holder">
+                                <div class="col" id="div-for-results">
+                                    Needs info from server-side
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                    <br>
+                                    .
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Profile -->
+                        <div class="col-4" id="profile-holder">
+                            <div id="div-for-profile">
+                                Username
+                                <br>
+                                <img src="../images/favicon.png">
+                                <br>
+                                <div id="user-info">
+                                    BLah Blah Blah
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
