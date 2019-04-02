@@ -43,39 +43,40 @@ var refreshExamples = function() {
           class: "list-group-item",
           "data-id": example.id
         })
+        .addClass("post-item")
         .append($a);
 
-      var $newPost = $("<div>").addClass("dropdown dropping-down");
+      // var $newPost = $("<div>").addClass("dropdown dropping-down");
 
-      var $insides = $("<a>")
-        .addClass("btn btn-secondary dropdown-toggle dropdown-color-change")
-        .attr("href", "#")
-        .attr("role", "button")
-        .attr("id", "dropdownMenuLink")
-        .attr("data-toggle", "dropdown")
-        .attr("aria-haspopup", "true")
-        .attr("aria-expanded", "false");
+      // var $insides = $("<a>")
+      //   .addClass("btn btn-secondary dropdown-toggle dropdown-color-change")
+      //   .attr("href", "#")
+      //   .attr("role", "button")
+      //   .attr("id", "dropdownMenuLink")
+      //   .attr("data-toggle", "dropdown")
+      //   .attr("aria-haspopup", "true")
+      //   .attr("aria-expanded", "false");
 
-      var $otherInsides = $("<div>")
-        .addClass("dropdown-menu")
-        .attr("aria-labelledby", "dropdownMenuLink");
+      // var $otherInsides = $("<div>")
+      //   .addClass("dropdown-menu")
+      //   .attr("aria-labelledby", "dropdownMenuLink");
 
-      var $delete = $("<a>")
-        .addClass("dropdown-item delete")
-        .attr("href", "#")
-        .text("Delete");
+      // var $delete = $("<a>")
+      //   .addClass("dropdown-item delete")
+      //   .attr("href", "#")
+      //   .text("Delete");
 
-      $otherInsides.append($delete);
-      $newPost.append($insides);
-      $newPost.append($otherInsides);
+      // $otherInsides.append($delete);
+      // $newPost.append($insides);
+      // $newPost.append($otherInsides);
 
-      // var $button = $("<button>")
-      //   .addClass("btn btn-danger float-right delete")
-      //   .text("x");
+      // $li.append($newPost);
 
-      // $li.append($button);
+      var $button = $("<button>")
+        .addClass("btn btn-danger float-right delete")
+        .text("x");
 
-      $li.append($newPost);
+      $li.append($button);
 
       return $li;
     });
