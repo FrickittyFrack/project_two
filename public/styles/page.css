@@ -135,6 +135,7 @@ body {
 }
 
 #div-for-postbar {
+    clear: both;
     background-color: #747474;
     padding: 20px;
     margin: 10px 0px;
@@ -143,6 +144,7 @@ body {
 }
 
 #div-for-results {
+    clear: both;
     background-color: #747474;
     padding: 20px;
     margin: 16px;
@@ -157,6 +159,25 @@ body {
     margin: 10px;
     width: 23%;
 }
+
+/* --------------------------------------------------------
+------------------------Twitch CSS-------------------------
+----------------------------------------------------------- */
+
+#twitch-div {
+    background-color: #565656;
+    float: left;
+}
+
+#thumb {
+    max-width: 300px;
+}
+
+.test {
+    max-width: 100px;
+    float: left;
+}
+
 
 /* --------------------------------------------------------
 ---------------------------News CSS------------------------
