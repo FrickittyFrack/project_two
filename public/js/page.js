@@ -126,47 +126,83 @@ $(document).ready(function () {
 
 });
 
-// Twitch Link API
+// For Loops for each Carousel page
 
-var url1 =  '/api/streams';
+for (var i = 0; i < 3; i++) {
+
+    carouselCreator(i, ".carousel-item.active");
+
+};
+
+for (var i = 3; i < 6; i++) {
+
+    carouselCreator(i, ".carousel-item.page-2");
+
+};
+
+for (var i = 6; i < 9; i++) {
+
+    carouselCreator(i, ".carousel-item.page-3");
+
+};
+
+for (var i = 9; i < 12; i++) {
+
+    carouselCreator(i, ".carousel-item.page-4");
+
+};
+
+// Function with API and Div creation
+
+function carouselCreator(forLoopVal, section) {
+
+    var url1 =  "/api/streams";
         
-var req = new Request(url1);
-    fetch(req)
-    .then((resp) => resp.json())
-    .then(function(data) {
-        console.log(data);
-
-        for (var i = 0; i < 10; i++) {
-
-            var thumbnail = data.thumbnails[i];
-
-            var streamers = data.streamers[i];
-            
-            console.log(thumbnail);
-
-            // Div creation
-            
-            var twitch = $("<img>");
-            
-            twitch.attr("id", "thumb");
-            twitch.attr("src", thumbnail);
-            
+    var req = new Request(url1);
+        fetch(req)
+        .then((resp) => resp.json())
+        .then(function(data) {
             console.log(data);
-            console.log(thumbnail);
-            
-            $("#div-for-twitch").append(twitch);
 
-            console.log(streamers);
-            
-            var stream = $("<div>");
-            
-            stream.attr("id", "streams");
-            stream.text(streamers);
-            
-            $("#div-for-twitch").append(streamers)
-            
-            };
-        });
+    var newStream = {
+        thumbnail: data.thumbnail[forLoopVal],
+        streamer: data.streamer[forLoopVal],
+        title: data.title[forLoopVal],
+        isLive: data.live[forLoopVal]
+    };
+
+    console.log(newStream);
+
+    // Div creation
+
+    var stream = $("<div>");
+
+    stream.attr("id", "twitch-div");
+
+    var streamerName = $("<div>");
+    
+    streamerName.attr("id", "streamer");
+    streamerName.text(newStream.streamer);
+    
+    var twitchThumb = $("<img>");
+    
+    twitchThumb.attr("id", "thumb");
+    twitchThumb.attr("src", newStream.thumbnail);
+
+    var streamTitle = $("<div>");
+
+    streamTitle.attr("id", "stream-title");
+    streamTitle.text(newStream.title);
+    
+    stream.append(streamTitle);
+    stream.append(streamerName);
+    stream.append(twitchThumb);
+    
+    $(section).append(stream);
+
+    });
+
+};
 
 // Logic for tabs
 
@@ -175,11 +211,11 @@ function tabChanger(evt, section) {
     x = document.getElementsByClassName("tab");
     for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
-    }
+    };
     tablinks = document.getElementsByClassName("tablink");
     for (i = 0; i < x.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active-tab", "");
-    }
+    };
     document.getElementById(section).style.display = "block";
     evt.currentTarget.className += " active-tab";
 };

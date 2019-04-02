@@ -43,13 +43,19 @@ module.exports = function(app) {
       .then(function(res) {
         var info = res.body.data;
         var results = {
-          thumbnails: info.map(function(d) {
+          thumbnail: info.map(function(d) {
             return d.thumbnail_url
               .replace("{width}", "1280")
               .replace("{height}", "720");
           }),
-          streamers: info.map(function(d) {
+          streamer: info.map(function(d) {
             return d.user_name;
+          }),
+          title: info.map(function(d) {
+            return d.title;
+          }),
+          live: info.map(function(d) {
+            return d.type;
           })
         };
 

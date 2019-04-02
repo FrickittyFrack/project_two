@@ -45,11 +45,37 @@ var refreshExamples = function() {
         })
         .append($a);
 
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("x");
+      var $newPost = $("<div>").addClass("dropdown dropping-down");
 
-      $li.append($button);
+      var $insides = $("<a>")
+        .addClass("btn btn-secondary dropdown-toggle dropdown-color-change")
+        .attr("href", "#")
+        .attr("role", "button")
+        .attr("id", "dropdownMenuLink")
+        .attr("data-toggle", "dropdown")
+        .attr("aria-haspopup", "true")
+        .attr("aria-expanded", "false");
+
+      var $otherInsides = $("<div>")
+        .addClass("dropdown-menu")
+        .attr("aria-labelledby", "dropdownMenuLink");
+
+      var $delete = $("<a>")
+        .addClass("dropdown-item delete")
+        .attr("href", "#")
+        .text("Delete");
+
+      $otherInsides.append($delete);
+      $newPost.append($insides);
+      $newPost.append($otherInsides);
+
+      // var $button = $("<button>")
+      //   .addClass("btn btn-danger float-right delete")
+      //   .text("x");
+
+      // $li.append($button);
+
+      $li.append($newPost);
 
       return $li;
     });
