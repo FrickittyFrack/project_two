@@ -177,27 +177,29 @@ function carouselCreator(forLoopVal, section) {
 
     var stream = $("<div>");
 
-    stream.attr("id", "twitch-div");
-
-    var streamerName = $("<div>");
+    stream.addClass("twitch-div");
     
-    streamerName.attr("id", "streamer");
-    streamerName.text(newStream.streamer);
-    
+    var thumbcontainer = $("<div>");
     var twitchThumb = $("<img>");
     
-    twitchThumb.attr("id", "thumb");
+    thumbcontainer.addClass("thumbnail")
+    twitchThumb.addClass("thumb");
     twitchThumb.attr("src", newStream.thumbnail);
-
+    
+    var streamerName = $("<div>");
+    
+    streamerName.addClass("streamer");
+    streamerName.text(newStream.streamer);
+    
     var streamTitle = $("<div>");
 
-    streamTitle.attr("id", "stream-title");
+    streamTitle.addClass("stream-title");
     streamTitle.text(newStream.title);
     
+    stream.append(twitchThumb);
     stream.append(streamTitle);
     stream.append(streamerName);
-    stream.append(twitchThumb);
-    
+
     $(section).append(stream);
 
     });

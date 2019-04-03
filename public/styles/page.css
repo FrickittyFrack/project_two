@@ -134,13 +134,32 @@ body {
     width: 100%;
 }
 
+#div-for-stats {
+    display: inline-block;
+    position: relative;
+    background-color: #747474;
+    padding: 20px;
+    margin: 10px;
+    width: 23%;
+}
+
+
+/* --------------------------------------------------------
+------------------------Post CSS---------------------------
+----------------------------------------------------------- */
+
 #div-for-postbar {
     clear: both;
     background-color: #747474;
     padding: 20px;
     margin: 10px 0px;
     width: 100%;
-    height: 22%;
+    height: 38%;
+}
+
+.post-div {
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 #div-for-results {
@@ -151,33 +170,52 @@ body {
     width: 100%;
 }
 
-#div-for-stats {
-    display: inline-block;
-    position: relative;
-    background-color: #747474;
-    padding: 20px;
+#example-list {
+    background-color: dimgray;
+    padding-bottom: 10px;
+}
+
+.post-item {
     margin: 10px;
-    width: 23%;
+    padding: 10px;
 }
 
 /* --------------------------------------------------------
 ------------------------Twitch CSS-------------------------
 ----------------------------------------------------------- */
 
-#twitch-div {
-    background-color: #565656;
+.twitch-div {
     float: left;
+    padding: 5px;
 }
 
-#thumb {
+.thumb {
     max-width: 300px;
 }
 
-.test {
-    max-width: 100px;
-    float: left;
+.streamer {
+    font-size: 12px;
 }
 
+.stream-title {
+    max-width: 300px;
+    max-height: 25px;
+    overflow: hidden;
+}
+
+.carousel-indicators {
+    bottom: -20px !important;
+}
+
+.carousel-control-next {
+    right: -20px !important;
+    width: 5% !important;
+}
+
+.carousel-control-prev {
+    left: -20px !important;
+    width: 5% !important;
+}
 
 /* --------------------------------------------------------
 ---------------------------News CSS------------------------
@@ -238,6 +276,11 @@ body {
     text-align: center;
     padding: 30px 70px 30px 0px;
     float: right;
+}
+
+.submit-btn {
+    float: right;
+    padding: 5px;
 }
 
 .text-size {
